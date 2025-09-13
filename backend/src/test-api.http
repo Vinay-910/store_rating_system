@@ -1,0 +1,37 @@
+### Register new user
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+  "name": "John Doe Normal User Test",
+  "email": "john@example.com",
+  "password": "Password123!",
+  "address": "123 Main Street, City"
+}
+
+### Login
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "admin@system.com",
+  "password": "admin_password_here"
+}
+
+### Get all stores (requires auth)
+GET http://localhost:5000/api/stores
+Authorization: Bearer YOUR_JWT_TOKEN_HERE
+
+### Submit rating (normal user)
+POST http://localhost:5000/api/ratings
+Authorization: Bearer YOUR_JWT_TOKEN_HERE
+Content-Type: application/json
+
+{
+  "store_id": 1,
+  "rating": 5
+}
+
+### Admin dashboard
+GET http://localhost:5000/api/admin/dashboard
+Authorization: Bearer ADMIN_JWT_TOKEN_HERE
