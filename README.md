@@ -281,7 +281,7 @@ CREATE TABLE ratings (
 
 ## ✅ Form Validations
 
-- **Name**: 20-60 characters
+- **Name**: Upto 60 characters and not null
 - **Email**: Valid email format
 - **Password**: 8-16 characters, uppercase + special character
 - **Address**: Maximum 400 characters
